@@ -1,10 +1,253 @@
 * {
-    margin: 0px;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #fff;
+    background-color: white;
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
+    margin: 0 auto;
+}
+
+body > * {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400px;
+}
+
+h3 {
+    display: flex;
+    margin: auto 0px;
+    font-size: 18px;
+}
+
+
+
+/*__________Header__________*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0em 5em;
+}
+
+.email {
+    width: 8%;
+    vertical-align: middle;
+}
+
+header > nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a {
+    transition: .2s;
+    display: flex;
+    margin: auto;
+}
+
+nav a:focus, nav a:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+header > article {
+    display: flex;
+}
+
+
+
+/*__________Main__________*/
+main {
+    width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 2em;
+}
+
+.avatar {
+    width: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    margin: 0 0 .75em 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 800;
+    text-align: center;
+}
+
+.title img {
+    position: absolute;
+    top: 45px; left: 400px;
+    z-index: -1;
+    width: 230px;
+}
+
+main > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+main > a {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 1em 3em;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10em;
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+    background-color: black;
+    transition: .2s ease-in-out;
+}
+
+main > a:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.5));
+    height: 100px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+}
+
+.buttom {
+    text-transform: uppercase;
+    margin: 5em;
+}
+
+.buttom:focus, .buttom:hover {
+    background: black;
+    color: #fff;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.buttom:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+
+
+/*__________Section__________*/
+.images {
+    margin-bottom: 100px;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-row-3 {
+    grid-template-rows: 150px 60px 150px;
+}
+
+.grid-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.g {
+    gap: 30px;
+}
+
+.row-2 {
+    grid-row: span 2;
+}
+
+.row-3 {
+    grid-row: span 3;
+}
+
+
+.images article {
+    position: relative;
+    overflow: hidden;
+}
+
+.images article:hover img {
+    transform: scale(1.1)
+}
+
+.images article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.images article a {
+    position: absolute;
+    z-index: 1;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,.25);
+    opacity: 0;
+    transition: .2s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.images article a:hover {
+    opacity: 1;
+}
+
+.images article .info {
+    padding: 10px 22px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 21px;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800px;
+
+    transition: .2s;
+}
+
+.images article a:hover .info {
+    margin-bottom: 0;
+}
+
+
+
+/*__________Classes__________*/
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
