@@ -15,14 +15,9 @@ body > * {
     margin: 0 auto;
 }
 
-h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 60px;
-}
-
 h2 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400px;
+    font-weight: 600;
 }
 
 h3 {
@@ -37,12 +32,13 @@ h3 {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 0em 5em;
+    padding: 1em 5em;
 }
 
 .email {
     width: 8%;
     vertical-align: middle;
+    user-select:none;
 }
 
 header > nav {
@@ -78,18 +74,15 @@ header > article {
 main {
     width: 1200px;
     text-align: center;
-    margin: 0 auto;
-}
-
-figure {
-    margin: 2em;
+    margin: 1em auto;
 }
 
 .avatar {
-    width: 15%;
+    width: 12.5%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    user-select:none;
 }
 
 figcaption {
@@ -99,11 +92,12 @@ figcaption {
 
 .title {
     position: relative;
-    margin: 0 0 .75em 0;
+    margin: 0.5em 0 .75em 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-    line-height: 1.2;
-    font-weight: 800;
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -4px;
     text-align: center;
 }
 
@@ -111,7 +105,7 @@ figcaption {
     position: absolute;
     top: 45px; left: 400px;
     z-index: -1;
-    width: 230px;
+    user-select:none;
 }
 
 main > p {
@@ -147,6 +141,7 @@ main > a:before {
 .buttom {
     text-transform: uppercase;
     margin: 5em;
+    user-select:none;
 }
 
 .buttom:focus, .buttom:hover {
@@ -164,9 +159,9 @@ main > a:before {
 
 
 
-/*__________Section__________*/
-.images {
-    margin-bottom: 100px;
+/*__________Footer__________*/
+footer {
+    padding: 0 5em;
 }
 
 .grid {
@@ -174,11 +169,11 @@ main > a:before {
 }
 
 .grid-row-3 {
-    grid-template-rows: 150px 60px 150px;
+    grid-template-rows: 200px 50px 200px;
 }
 
 .grid-col-3 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 0.7fr 1fr;
 }
 
 .g {
@@ -193,10 +188,14 @@ main > a:before {
     grid-row: span 3;
 }
 
+.images {
+    margin-bottom: 5em;
+}
 
 .images article {
     position: relative;
     overflow: hidden;
+    user-select:none;
 }
 
 .images article:hover img {
@@ -220,6 +219,7 @@ main > a:before {
     opacity: 0;
     transition: .2s ease-in-out;
     font-family: 'Montserrat', sans-serif;
+    user-select:none;
 }
 
 .images article a:hover {
